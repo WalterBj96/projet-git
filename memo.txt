@@ -1,0 +1,57 @@
+memo.txt
+git -v  
+ou
+git --version
+version de git
+
+Première utilisation
+---------------------------------------------------------------------------------
+git config --global user.name "prenom nom"
+git config --global user.email "prenom.nom@provider.fr"
+
+Pour vérifier (  L minuscule )
+git config -l
+entrée pour voir les lignes suivantes
+q (pour quitter)
+
+Pour remplacer ou corriger le nom ou l'email
+git config --global --replace-all user.name "nouvelle valeur"
+
+--------------------------------------------------------------------------------------------------
+Création d'un repository sur Github
+ex : https://github.com/fredericleclercq/projetgit.git
+
+git init
+permet d'initialiser le projet git (repository local)
+
+Le fichier .gitignore va permettre de lister  les fichiers/dossiers à ignorer du projet
+Ils ne seront pas synchronisés
+
+Associer le projet local au projet distant
+-------------------------------------------
+git remote add origin https://github.com/fredericleclercq/projetgit.git
+Verifier
+git remote -v
+---------------------------------------------------------------------------------------------------
+
+Ajouter les fichiers au projet (nouveaux et modifiés)
+git add --all
+
+Créer un paquet à envoyer (version)
+git commit -m "Premier envoi"
+
+Envoyer le paquet sur le repository distant (Premiere fois : authentification github)
+git push -u origin master
+(git push)
+--------------------------------------------------------------------
+
+Si pas de nouveau fichier :
+git commit -a -m "Ajout de balises"
+git push
+--------------------------------------------------------------------
+Si nouveau fichier (ACP) :
+git add --all
+git commit -m "Ajout de la feuille de style"
+git push
+
+
