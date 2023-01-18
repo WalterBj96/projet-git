@@ -1,4 +1,3 @@
-memo.txt
 git -v  
 ou
 git --version
@@ -53,5 +52,49 @@ Si nouveau fichier (ACP) :
 git add --all
 git commit -m "Ajout de la feuille de style"
 git push
+--------------------------------------------------------------------
+
+LES BRANCHES
+La branche par défaut (master ou main) correspond à la version en production
+Il est possible de créer d'autres branches (dev, test, recettage) dissociées de la branche master
+
+Créer une branche
+git branch test
+Se placer sur cette branche
+git checkout test
+
+Créer et se placer sur une nouvelle branche
+git checkout -b test
+
+Après des modifs et ajouts de fichier
+git add --all
+git commit -m "message"
+git push -u origin test
+(git push pour les suivants)
+
+Fusionner la branche test sur master
+------------------------------------
+Se placer sur master
+git checkout master
+
+Fusionner la branche test
+git merge test
+
+Mise à jour du repository distant
+git push -u origin master
+
+Supprimer une branche
+----------------------
+En local:
+git branch -d test
+A distance:
+git push origin --delete test
+
+Exercice : 
+Créer une nouvelle branche et modifier le fichier JS sur cette branche
+Faire l'envoi sur github
+Verifier la branche
+Fusionner la branche sur master
+Mettre à jour github
 
 
